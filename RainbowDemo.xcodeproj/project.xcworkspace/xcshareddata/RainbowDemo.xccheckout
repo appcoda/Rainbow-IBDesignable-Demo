@@ -6,29 +6,33 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FB5744B0-415C-492F-9CB7-1E98EB81A12E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RainbowDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>624D8E1804D7B54B207CEF53209F86FF336281D6</key>
-		<string>https://github.com/appcoda/RainbowDemo.git</string>
+		<key>7F3D7AD22F6FE13900E2D2F3D63E83CA328C0FA4</key>
+		<string>https://github.com/simonng/Rainbow-IBDesignable-Demo.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RainbowDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>624D8E1804D7B54B207CEF53209F86FF336281D6</key>
-		<string>RainbowDemo/</string>
+		<key>7F3D7AD22F6FE13900E2D2F3D63E83CA328C0FA4</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/appcoda/RainbowDemo.git</string>
+	<string>https://github.com/simonng/Rainbow-IBDesignable-Demo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>624D8E1804D7B54B207CEF53209F86FF336281D6</string>
+	<string>7F3D7AD22F6FE13900E2D2F3D63E83CA328C0FA4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>624D8E1804D7B54B207CEF53209F86FF336281D6</string>
+			<string>7F3D7AD22F6FE13900E2D2F3D63E83CA328C0FA4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RainbowDemo</string>
 		</dict>

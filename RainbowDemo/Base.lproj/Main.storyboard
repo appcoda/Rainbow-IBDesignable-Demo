@@ -24,19 +24,19 @@
                                         <real key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="middleCircleRadius">
-                                        <real key="value" value="140"/>
+                                        <real key="value" value="150"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="outerCircleRadius">
-                                        <real key="value" value="290"/>
+                                        <real key="value" value="200"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="1" green="0.78247391249999998" blue="0.065811302720000006" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
-                                        <color key="value" red="1" green="0.78247391249999998" blue="0.065811302720000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.95128744840621948" green="0.28607621788978577" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
