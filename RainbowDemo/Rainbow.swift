@@ -20,49 +20,49 @@ class Rainbow: UIView {
     @IBInspectable var middleCircleRadius:CGFloat = 150
     @IBInspectable var outerCircleRadius:CGFloat = 215
     
-    required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    override func drawRect(rect: CGRect) {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func draw(_ rect: CGRect) {
         // Add ARCs
         self.addCirle(innerCircleRadius, capRadius: 20, color: self.firstColor)
         self.addCirle(middleCircleRadius, capRadius: 20, color: self.secondColor)
         self.addCirle(outerCircleRadius, capRadius: 20, color: self.thirdColor)
     }
     
-    func addCirle(arcRadius: CGFloat, capRadius: CGFloat, color: UIColor) {
-        let X = CGRectGetMidX(self.bounds)
-        let Y = CGRectGetMidY(self.bounds)
+    func addCirle(_ arcRadius: CGFloat, capRadius: CGFloat, color: UIColor) {
+        let X = self.bounds.midX
+        let Y = self.bounds.midY
         
         // Bottom Oval
-        let pathBottom = UIBezierPath(ovalInRect: CGRectMake((X - (arcRadius/2)), (Y - (arcRadius/2)), arcRadius, arcRadius)).CGPath
-        self.addOval(20.0, path: pathBottom, strokeStart: 0, strokeEnd: 0.5, strokeColor: color, fillColor: UIColor.clearColor(), shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSizeZero)
+        let pathBottom = UIBezierPath(ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius)).cgPath
+        self.addOval(20.0, path: pathBottom, strokeStart: 0, strokeEnd: 0.5, strokeColor: color, fillColor: UIColor.clear, shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSize.zero)
         
         // Middle Cap
-        let pathMiddle = UIBezierPath(ovalInRect: CGRectMake((X - (capRadius/2)) - (arcRadius/2), (Y - (capRadius/2)), capRadius, capRadius)).CGPath
-        self.addOval(0.0, path: pathMiddle, strokeStart: 0, strokeEnd: 1.0, strokeColor: color, fillColor: color, shadowRadius: 5.0, shadowOpacity: 0.5, shadowOffsset: CGSizeZero)
-
+        let pathMiddle = UIBezierPath(ovalIn: CGRect(x: (X - (capRadius/2)) - (arcRadius/2), y: (Y - (capRadius/2)), width: capRadius, height: capRadius)).cgPath
+        self.addOval(0.0, path: pathMiddle, strokeStart: 0, strokeEnd: 1.0, strokeColor: color, fillColor: color, shadowRadius: 5.0, shadowOpacity: 0.5, shadowOffsset: CGSize.zero)
+        
         // Top Oval
-        let pathTop = UIBezierPath(ovalInRect: CGRectMake((X - (arcRadius/2)), (Y - (arcRadius/2)), arcRadius, arcRadius)).CGPath
-        self.addOval(20.0, path: pathTop, strokeStart: 0.5, strokeEnd: 1.0, strokeColor: color, fillColor: UIColor.clearColor(), shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSizeZero)
+        let pathTop = UIBezierPath(ovalIn: CGRect(x: (X - (arcRadius/2)), y: (Y - (arcRadius/2)), width: arcRadius, height: arcRadius)).cgPath
+        self.addOval(20.0, path: pathTop, strokeStart: 0.5, strokeEnd: 1.0, strokeColor: color, fillColor: UIColor.clear, shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSize.zero)
         
     }
-
-    func addOval(lineWidth: CGFloat, path: CGPathRef, strokeStart: CGFloat, strokeEnd: CGFloat, strokeColor: UIColor, fillColor: UIColor, shadowRadius: CGFloat, shadowOpacity: Float, shadowOffsset: CGSize) {
+    
+    func addOval(_ lineWidth: CGFloat, path: CGPath, strokeStart: CGFloat, strokeEnd: CGFloat, strokeColor: UIColor, fillColor: UIColor, shadowRadius: CGFloat, shadowOpacity: Float, shadowOffsset: CGSize) {
         
         let arc = CAShapeLayer()
         arc.lineWidth = lineWidth
         arc.path = path
         arc.strokeStart = strokeStart
         arc.strokeEnd = strokeEnd
-        arc.strokeColor = strokeColor.CGColor
-        arc.fillColor = fillColor.CGColor
-        arc.shadowColor = UIColor.blackColor().CGColor
+        arc.strokeColor = strokeColor.cgColor
+        arc.fillColor = fillColor.cgColor
+        arc.shadowColor = UIColor.black.cgColor
         arc.shadowRadius = shadowRadius
         arc.shadowOpacity = shadowOpacity
         arc.shadowOffset = shadowOffsset
